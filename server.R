@@ -335,12 +335,12 @@ page_1 <- layout_column_wrap(
         width = "50px",
         value_box(
           title = tags$p("Males", style = "font-size: 100%;"),
-          value = tags$p(as.character(999), style = "font-size: 150%; color: yellow;"),
+          value = tags$p(as.character(9999), style = "font-size: 150%; color: yellow;"),
           showcase = bs_icon("gender-male"),
         ),
         value_box(
           title = tags$p("Females", style = "font-size: 100%;"),
-          value = tags$p(as.character(99999), style = "font-size: 150%; color: yellow;"),
+          value = tags$p(as.character(9999), style = "font-size: 150%; color: yellow;"),
           showcase = bs_icon("gender-female")
         ),
         value_box(
