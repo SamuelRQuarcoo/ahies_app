@@ -17,14 +17,12 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           # this is the Heroku app name you already set up in dashboard
-          HEROKU_APP_NAME: ahies-app
+          heroku_app_name: ahies-app
           # app directory needs to be set relative to root of repo
-          APPDIR: "."
+          appdir: "."
           # secrets need to be added to the GitHub repo settings
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
-          DOCKERFILE_NAME: "Dockerfile"
-          DOCKER_OPTIONS: "--no-cache"
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}"
           
           # don't change this
           usedocker: true
