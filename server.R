@@ -340,7 +340,7 @@ page_1 <- layout_column_wrap(
         ),
         value_box(
           title = tags$p("Females", style = "font-size: 100%;"),
-          value = tags$p(as.character(9999), style = "font-size: 150%; color: yellow;"),
+          value = tags$p(as.character(99999), style = "font-size: 150%; color: yellow;"),
           showcase = bs_icon("gender-female")
         ),
         value_box(
