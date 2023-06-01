@@ -48,7 +48,6 @@ RUN Rscript -e "install.packages('htmltools')"
 RUN Rscript -e "install.packages('htmlwidgets')"
 RUN Rscript -e "install.packages('shiny.fluent')"
 
-RUN Rscript -e "install.packages('RMySQL')"
 RUN Rscript -e "install.packages('janitor')"
 RUN Rscript -e "install.packages('heatmaply')"
 RUN Rscript -e "install.packages('mapboxer')"
