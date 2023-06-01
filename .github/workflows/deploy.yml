@@ -25,7 +25,3 @@ jobs:
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
           # don't change this
           usedocker: true
-          docker_build_args: |
-            GITHUB_PAT
-        env:
-          GITHUB_PAT: ${{ secrets.PRIVATE_REPO_PAT }}
