@@ -24,7 +24,7 @@ library(shinymanager)      # Load the shinymanager package for adding user authe
 library(htmltools)         # Load the htmltools package for working with HTML code in R
 library(htmlwidgets)       # Load the htmlwidgets package for creating interactive widgets
 library(shiny.fluent)      # Load the shiny.fluent package for creating Shiny applications with a Fluent Design style
-library(RMySQL)            # Load the RMySQL package for interfacing with MySQL databases from R
+# library(RMySQL)            # Load the RMySQL package for interfacing with MySQL databases from R
 library(janitor)           # Load the janitor package for cleaning and formatting messy data
 library(heatmaply)
 library(mapboxer)
