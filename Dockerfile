@@ -55,6 +55,8 @@ RUN Rscript -e "install.packages('mapboxer')"
 RUN Rscript -e "install.packages('bcrypt')"
 RUN Rscript -e "install.packages('dplyr')"
 
+RUN Rscript -e "install.packages('shinyauthr')"
+
 # copy everything inside the app folder
 COPY app .
 
