@@ -27,7 +27,34 @@ WORKDIR /home/app
 COPY ./renv.lock .
 RUN Rscript -e "options(renv.consent = TRUE);renv::restore(lockfile = '/home/app/renv.lock', repos = c(CRAN = 'https://cloud.r-project.org'), library = '/usr/local/lib/R/site-library', prompt = FALSE)"
 RUN rm -f renv.lock
+
 RUN Rscript -e "install.packages('shinyjs')"
+RUN Rscript -e "install.packages('shinythemes')"
+
+RUN Rscript -e "install.packages('bslib')"
+RUN Rscript -e "install.packages('dbplyr')"
+RUN Rscript -e "install.packages('lubridate')"
+RUN Rscript -e "install.packages('plotly')"
+RUN Rscript -e "install.packages('bsicons')"
+RUN Rscript -e "install.packages('reactable')"
+RUN Rscript -e "install.packages('echarts4r')"
+RUN Rscript -e "install.packages('DBI')"
+RUN Rscript -e "install.packages('stringr')"
+RUN Rscript -e "install.packages('scales')"
+RUN Rscript -e "install.packages('readr')"
+RUN Rscript -e "install.packages('shinyWidgets')"
+RUN Rscript -e "install.packages('shinymanager')"
+RUN Rscript -e "install.packages('htmltools')"
+RUN Rscript -e "install.packages('htmlwidgets')"
+RUN Rscript -e "install.packages('shiny.fluent')"
+
+RUN Rscript -e "install.packages('RMySQL')"
+RUN Rscript -e "install.packages('janitor')"
+RUN Rscript -e "install.packages('heatmaply')"
+RUN Rscript -e "install.packages('mapboxer')"
+
+RUN Rscript -e "install.packages('bcrypt')"
+RUN Rscript -e "install.packages('dplyr')"
 
 # copy everything inside the app folder
 COPY app .
