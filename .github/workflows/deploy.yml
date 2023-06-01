@@ -24,4 +24,4 @@ jobs:
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
           # don't change this
           usedocker: true
-           dontuseforce: 1
+          dontuseforce: 1
