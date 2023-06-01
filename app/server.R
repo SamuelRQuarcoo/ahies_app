@@ -30,7 +30,7 @@ library(heatmaply)
 library(mapboxer)
 library(bcrypt)
 library(dplyr)
-
+library(shinyauthr)
 # dataframe that holds usernames, passwords and other user data
 user_base <- tibble::tibble(
   user = c("user1", "user2"),

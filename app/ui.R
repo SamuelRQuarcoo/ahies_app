@@ -26,6 +26,7 @@ library(heatmaply)
 library(mapboxer)
 library(bcrypt)
 library(dplyr)             # Load the dplyr package for data manipulation
+library(shinyauthr)
 
 #************************************************** 
 #*GLOBAL PARAMETERS
