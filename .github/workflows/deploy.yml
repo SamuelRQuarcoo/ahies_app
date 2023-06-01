@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - master
 
 jobs:
   deploy:
@@ -22,6 +23,9 @@ jobs:
           # secrets need to be added to the GitHub repo settings
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
-          
           # don't change this
           usedocker: true
+          docker_build_args: |
+            GITHUB_PAT
+        env:
+          GITHUB_PAT: ${{ secrets.PRIVATE_REPO_PAT }}

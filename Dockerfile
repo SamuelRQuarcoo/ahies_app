@@ -1,5 +1,9 @@
-# change here is you want to pin R version
-FROM rocker/r-base:latest
+FROM rocker/shiny:4.1.0
+
+# set env var
+ARG GITHUB_PAT=default
+ENV GITHUB_PAT=$GITHUB_PAT
+
 
 # change maintainer here
 LABEL maintainer="Samuel R Quarcoo <samuel.quarcoo@gmail.com>"
@@ -38,10 +42,10 @@ RUN chown app:app -R /home/app
 USER app
 
 # EXPOSE can be used for local testing, not supported in Heroku's container runtime
-EXPOSE 8080
+EXPOSE 3838
 
 # web process/code should get the $PORT environment variable
-ENV PORT=8080
+ENV PORT=3838
 
 # command we want to run
 CMD ["R", "-e", "shiny::runApp('/home/app', host = '0.0.0.0', port=as.numeric(Sys.getenv('PORT')))"]
