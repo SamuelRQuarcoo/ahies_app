@@ -254,6 +254,58 @@ female_count <- df_sex %>% filter(s1aq1 == 2) %>% pull
 #*USER INTERFACE
 #**************************************************
 #*
+
+#* User Guide
+user_guide <- layout_column_wrap(
+  tags$head(tags$style(HTML(".small-box {height: 50px}"))),
+  width = 1,
+  heights_equal = "row",
+  card(
+    card_header("Guide to Using the AHIES Dashboard"),
+    layout_column_wrap(
+      width = "100px",
+      card(
+        full_screen = TRUE,
+        layout_column_wrap(
+          width = "50px",
+          value_box(
+            title = tags$p("Households Enumerated",  style = "font-size: 100%;"),
+            value = tags$p(as.character(hhold_enumerated), style = "font-size: 150%; color: yellow;"),
+            showcase = bs_icon("house"),
+            height = 20,
+            style = "font-size: 80%;"
+          ),
+          
+        ),
+        
+        tags$p(),
+        
+        layout_column_wrap(
+          width = "50px",
+          value_box(
+            title = tags$p("Average Household Size", style = "font-size: 100%;"),
+            value = tags$p(as.character(hhold_size), style = "font-size: 150%; color: yellow;"),
+            showcase = bs_icon("file-break"),
+          ),
+        ),
+        
+        tags$p(),
+        
+        layout_column_wrap(
+          width = "50px",
+          value_box(
+            title = tags$p("Males", style = "font-size: 100%;"),
+            value = tags$p(as.character(99999), style = "font-size: 150%; color: yellow;"),
+            showcase = bs_icon("gender-male"),
+          ),
+        )
+        
+      )
+    )
+  ))
+
+
+
 #*Summary
 page_1 <- layout_column_wrap(
   tags$head(tags$style(HTML(".small-box {height: 50px}"))),
@@ -335,7 +387,7 @@ page_1 <- layout_column_wrap(
         width = "50px",
         value_box(
           title = tags$p("Males", style = "font-size: 100%;"),
-          value = tags$p(as.character(99999), style = "font-size: 150%; color: yellow;"),
+          value = tags$p(as.character(9999), style = "font-size: 150%; color: yellow;"),
           showcase = bs_icon("gender-male"),
         ),
         value_box(
