@@ -28,6 +28,7 @@ COPY ./renv.lock .
 RUN Rscript -e "options(renv.consent = TRUE);renv::restore(lockfile = '/home/app/renv.lock', repos = c(CRAN = 'https://cloud.r-project.org'), library = '/usr/local/lib/R/site-library', prompt = FALSE)"
 RUN rm -f renv.lock
 
+RUN Rscript -e "install.packages('shiny')"
 RUN Rscript -e "install.packages('shinyjs')"
 RUN Rscript -e "install.packages('shinythemes')"
 
