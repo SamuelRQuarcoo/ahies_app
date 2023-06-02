@@ -1,6 +1,6 @@
 # init.R
 #
-# Example R code to install packages if not already installed
+# Example R code to install packages if not already installed in app
 
 my_packages = c("shiny", 
                 "shinyjs",
